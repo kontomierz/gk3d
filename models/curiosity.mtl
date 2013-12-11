@@ -1,0 +1,87 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+# Multi/Sub RoverMat (10) to come 
+#
+newmtl Material__119
+Ka  0.9 0.9 0.9
+Kd  0.9 0.9 0.9
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  8.0
+illum 2
+#
+newmtl Material__120
+Ka  0.1 0.0 0.6
+Kd  0.1 0.0 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  8.9
+illum 2
+#
+newmtl Material__121
+Ka  1.0 0.8 0.6
+Kd  1.0 0.8 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl Material__122
+Ka  0.2 0.2 0.2
+Kd  0.2 0.2 0.2
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl Material__123
+Ka  1.0 0.9 0.4
+Kd  1.0 0.9 0.4
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  5.0
+illum 2
+#
+newmtl Material__124
+Ka  0.6 0.4 0.2
+Kd  0.6 0.4 0.2
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl Material__125
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl Material__115
+Ka  0.2 0.1 0.0
+Kd  0.2 0.1 0.0
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  2.6
+illum 2
+#
+newmtl Material__116
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+newmtl Material__117
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  0.0
+illum 2
+#
+# Multi/Sub RoverMat done 
+#
+# EOF
