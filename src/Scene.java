@@ -21,6 +21,10 @@ public class Scene extends GLJPanel implements GLEventListener {
 	public boolean enableReflectorSpot = true;
 	public boolean enableCuriositySpot = true;
 	
+	// identyfikatory tekstur
+	int earthTid;
+	int marsTid;	
+	
 	// odpowiada za ustawienie fps dla animacji
 	private FPSAnimator animator;
 
@@ -36,6 +40,8 @@ public class Scene extends GLJPanel implements GLEventListener {
 	// obiekty na scenie
 	private Satellite satellite;
 	private Sphere planet;
+	private Sphere earth;
+	private Sphere mars;
 	private CosmicStation cosmicStation;
 
 	// modele
@@ -49,7 +55,7 @@ public class Scene extends GLJPanel implements GLEventListener {
 		this.addGLEventListener(this);
 		this.animator = new FPSAnimator(this, 30, false);
 		this.animator.start();
-		this.camera = new Camera(0, 5, -20);
+		this.camera = new Camera(0, 5, -60);
 		this.lastTime = System.nanoTime();
 	}
 	
@@ -102,6 +108,14 @@ public class Scene extends GLJPanel implements GLEventListener {
 
 		this.spotModel = ModelLoaderOBJ.LoadModel("./models/spot.obj", "./models/spot.mtl", gl);
 		this.curiosityModel = ModelLoaderOBJ.LoadModel("./models/curiosity.obj", "./models/curiosity.mtl", gl);
+
+		gl.glEnable(GL2.GL_TEXTURE_2D);
+		earthTid = TextureLoader.setupTextures("./gfx/earth.png", gl);
+		marsTid = TextureLoader.setupTextures("./gfx/mars.png", gl);
+		gl.glBindTexture(GL2.GL_TEXTURE_2D, 0);
+
+		this.earth = new Sphere(glu, 10, -40, 10, 10);
+		this.mars = new Sphere(glu, 8, 40, 10, 10);
 	}
 	
 	/// Aktualizacja czasu, który up³yn¹³ od ostatniej klatki
@@ -175,8 +189,12 @@ public class Scene extends GLJPanel implements GLEventListener {
 		gl.glRotatef(-5, 0.0f, 0.0f, 1.0f);
 		gl.glScalef(0.01f, 0.01f, 0.01f);
 		this.curiosityModel.opengldraw(gl);
-		gl.glPopMatrix();		
-
+		gl.glPopMatrix();	
+		
+		// oteksturowane planety
+		this.earth.DrawWithTexture(gl, glu, this.earthTid);
+		this.mars.DrawWithTexture(gl, glu, this.marsTid);
+		
 		gl.glFlush();
 	}
 

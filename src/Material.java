@@ -8,9 +8,9 @@ public abstract class Material {
 	public float shininess;
 	
 	public Material() {
-		this.ambient = new float[] {0.0f, 0.0f, 0.0f};
-		this.diffuse = new float[] {0.0f, 0.0f, 0.0f};
-		this.specular = new float[] {0.0f, 0.0f, 0.0f};
+		this.ambient = new float[] {1.0f, 1.0f, 1.0f};
+		this.diffuse = new float[] {1.0f, 1.0f, 1.0f};
+		this.specular = new float[] {1.0f, 1.0f, 1.0f};
 	}
 
 	public void SetMaterial(GL2 gl) {

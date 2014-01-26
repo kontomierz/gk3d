@@ -1,6 +1,5 @@
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
@@ -8,14 +7,11 @@ import javax.media.opengl.GL2;
 
 import de.matthiasmann.twl.utils.PNGDecoder;
 
-
 public class TextureLoader {
 	public static int setupTextures(String filename, GL2 gl) {
 		IntBuffer intBuffer = IntBuffer.allocate(1);
 	    gl.glGenTextures(1, intBuffer);
 	    intBuffer.rewind();
-	    //GL11.glGenTextures(tmp);
-	    //tmp.rewind();
 	    try {
 	        InputStream in = new FileInputStream(filename);
 	        PNGDecoder decoder = new PNGDecoder(in);
