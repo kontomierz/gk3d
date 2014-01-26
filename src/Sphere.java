@@ -41,6 +41,17 @@ public class Sphere extends Material {
 		this.Draw(gl, glu);
 		gl.glPopMatrix();		
 	}
+	
+	public void DrawWithTexture(GL2 gl, GLU glu, int textureId) {
+		glu.gluQuadricTexture(this.quadric, true);
+		gl.glBindTexture(GL2.GL_TEXTURE_2D, textureId); 
+		gl.glTexEnvi(GL2.GL_TEXTURE_ENV, GL2.GL_TEXTURE_ENV_MODE, GL2.GL_MODULATE); 
+		// TODO czy to jest potrzebne
+		gl.glColor3d(1.0,0.8,0.8); 
+		gl.glEnable(GL2.GL_TEXTURE_2D); 
+		this.DrawExt(gl, glu);
+		gl.glDisable(GL2.GL_TEXTURE_2D);
+	}
 
 	public float getRadius() {
 		return radius;
