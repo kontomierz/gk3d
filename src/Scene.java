@@ -170,7 +170,7 @@ public class Scene extends GLJPanel implements GLEventListener {
 		
 		// model ³azika
 		gl.glPushMatrix();
-		gl.glTranslatef(-5.0f, 0.45f, 0);
+		gl.glTranslatef(-10.0f, 5.45f, 5.0f);
 		gl.glRotatef(160, 0.0f, 1.0f, 0.0f);
 		gl.glRotatef(-5, 0.0f, 0.0f, 1.0f);
 		gl.glScalef(0.01f, 0.01f, 0.01f);
